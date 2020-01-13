@@ -1,4 +1,4 @@
-String gitOrigin = "git@github.com:kubilaykaptanoglu/springboot-helloworld.git"
+String gitOrigin = "git@github.com:kubilaykaptanoglu/aegonworkshop.git"
 String dockerHub = "bcfmkubilay/aegonworkshop"
 node{
 properties([
