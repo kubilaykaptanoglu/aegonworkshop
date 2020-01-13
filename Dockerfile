@@ -1,9 +1,8 @@
 FROM maven:3-jdk-8-alpine as builder
-  
+ARG sonarip=test
 COPY . /data/springboot-helloworld
 WORKDIR /data/springboot-helloworld
-RUN ["mvn", "clean", "install", "-Dmaven.test.skip=true"]
-
+RUN mvn clean install sonar:sonar -Dsonar.host.url=${sonarip}
 FROM openjdk:8-alpine
 
 WORKDIR /data
